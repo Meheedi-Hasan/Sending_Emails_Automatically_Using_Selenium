@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TestAll]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="TestNG Annotation(failed)">
+    <classes>
+      <class name="sample.testCases.gmail">
+        <methods>
+          <include name="Logout"/>
+          <include name="Login"/>
+          <include name="writeMessage"/>
+          <include name="validateInbox"/>
+        </methods>
+      </class> <!-- sample.testCases.gmail -->
+      <class name="sample.testCases.yahoo">
+        <methods>
+          <include name="setBrowserEnv"/>
+          <include name="browserClose"/>
+          <include name="Logout"/>
+          <include name="Login"/>
+          <include name="validateSent"/>
+        </methods>
+      </class> <!-- sample.testCases.yahoo -->
+    </classes>
+  </test> <!-- TestNG Annotation(failed) -->
+</suite> <!-- Failed suite [TestAll] -->

@@ -15,9 +15,9 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class gmail {
+public class gmail extends driverSetup{
 	
-	public static WebDriver driver;
+
 	public static String URl = "https://gmail.com/";
 	public static String email = "mh.hassann19@gmail.com";
 	public static String pass = ";qwertyuio@$";
@@ -25,14 +25,7 @@ public class gmail {
 	public static String emailSubject = "Hello";
 	public static String emailBody = "I am confirming that I receive your email.";
 	public static WebElement element;
-	/*
-	@BeforeSuite
-	public static void setBrowserEnv() throws InterruptedException{
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\DELL\\eclipse-workspace\\chromedriver.exe");
-		driver = new ChromeDriver();
-		System.out.println("setBrowserEnv() method executed");
-	}
-	*/
+	
 	@BeforeClass
 	public static void Login() throws InterruptedException{
 		driver.get(URl);
@@ -109,13 +102,6 @@ public class gmail {
 		Thread.sleep(2000);
 		System.out.println("Gmail Logout() method executed");
 	}
-	/*
-	@AfterSuite
-	public static void browserClose() throws InterruptedException{
-		driver.close();
-		driver.quit();
-		System.out.println("browserClose() method executed");
-	}
-	*/
+
 	
 }

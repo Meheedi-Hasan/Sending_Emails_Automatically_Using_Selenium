@@ -13,9 +13,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
-public class yahoo {
+public class yahoo extends driverSetup{
 	
-	public static WebDriver driver;
 	public static String URl = "https://www.yahoo.com/";
 	public static String email = "mh.hasan1928@yahoo.com";
 	public static String pass = ";qwertyuio@$";
@@ -24,14 +23,7 @@ public class yahoo {
 	public static String emailBody = "Hello World";
 	public static WebElement element;
 	
-	@BeforeSuite
-	public static void setBrowserEnv(){
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\DELL\\eclipse-workspace\\chromedriver.exe");
-		driver = new ChromeDriver();
-		
-		System.out.println("setBrowserEnv() method executed");
-	}
-	
+
 	@BeforeClass
 	public static void Login() throws InterruptedException{
 		driver.get(URl);
@@ -104,13 +96,6 @@ public class yahoo {
 		driver.findElement(By.xpath("//a[@class='_yb_tdi30 _yb_po6e2 _yb_m78yl _yb_16g61 _yb_1delc']")).click();
 		Thread.sleep(2000);
 		System.out.println("Yahoo Logout() method executed");
-	}
-	
-	@AfterSuite
-	public static void browserClose() throws InterruptedException{
-		driver.close();
-		driver.quit();
-		System.out.println("browserClose() method executed");
 	}
 	
 	

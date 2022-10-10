@@ -1,2 +1,2 @@
-# Yahoo_Gmail-Testing
+# Validate Sending and Receiving emails between Yahoo to Gmail
 Login to Yahoo acoount, send an email to gmail account, then validate sending mail and logout and after that login to gmail account, validate receiving mail and send confirming mail to yahoo account and then logout.
